@@ -7,8 +7,7 @@ class Employee:
         self.commission = commission
 
     def get_pay(self):
-        return self.get_base_payment() + (self.commission.value
-        if self commmission else 0)
+        return self.get_base_payment() + (self.commission.value if self commmission else 0)
 
     def __str__(self):
         return f"{self.name} works on a {self.get_contract_desc()}" + \
@@ -23,7 +22,7 @@ class salaryEmployee(Employee):
     def get_contract_desc(self):
         return f"monthly salary of {self.salary}"
     
-    def get_base_pay(self):
+    def get_base_payment(self):
         return self.salary
 
 class hourlyEmployee(Employee):
@@ -35,7 +34,7 @@ class hourlyEmployee(Employee):
     def get_contract_desc(self):
         return f"contract of {self.hours} hours at {self.pay_per_hour}/hour"
 
-    def get_base_pay(self):
+    def get_base_payment(self):
         return self.hours * self.pay_per_hour
 
 class Fixed:
