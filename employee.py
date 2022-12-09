@@ -1,5 +1,17 @@
 """Employee pay calculator."""
 """ENTER YOUR SOLUTION HERE!"""
+class Fixed:
+    def __init__(self, bonus) -> None:
+        self.description = f"bonus commission of {bonus}"
+        self.value = bonus
+
+class Contract:
+    def __init__(self, contract_num, price_per_contract) -> None:
+        self.description = f"commission for {contract_num} contract(s) at {price_per_contract}/contract"
+        self.value = contract_num * price_per_contract
+    
+
+
 
 class Employee:
     def __init__(self, name, commission):
@@ -36,17 +48,6 @@ class hourlyEmployee(Employee):
 
     def get_base_payment(self):
         return self.hours * self.pay_per_hour
-
-class Fixed:
-    def __init__(self, bonus) -> None:
-        self.description = f"bonus commission of {bonus}"
-        self.value = bonus
-
-class Contract:
-    def __init__(self, contract_num, price_per_contract) -> None:
-        self.description = f"commission for {contract_num} contract(s) at {price_per_contract}/contract"
-        self.value = contract_num * price_per_contract
-    
 
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
