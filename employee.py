@@ -7,7 +7,7 @@ class Employee:
         self.commission = commission
 
     def get_pay(self):
-        return self.get_base_payment() + (self.commission.value if self commmission else 0)
+        return self.get_base_payment() + (self.commission.value)
 
     def __str__(self):
         return f"{self.name} works on a {self.get_contract_desc()}" + \
